@@ -6,8 +6,7 @@
   --grey: #D2D2D8;
   --imageborder: #727381;
   --blockbg: #f5e6ba;
-  --blockborder: burlywood;
-  --purplegrey: #4a4c94;
+  --navyblue: #000B2C;
 }
 
 #navbar {
@@ -16,7 +15,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--background);
+  background-color: var(--navyblue);
   z-index: 1;
   padding: 20px;
 }
@@ -94,7 +93,7 @@ li {
 }
 
 a {
-  color: var(--purplegrey);
+  color: var(--navyblue);
   text-decoration: underline;
 }
 
