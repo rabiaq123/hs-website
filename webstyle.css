@@ -11,7 +11,7 @@
 
 #navbar {
   margin: 0%;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -75,6 +75,17 @@ h1 {
   box-shadow: 0px 15px 15px var(--grey);
 }
 
+.image-content {
+  display: flex;
+  flex-direction: row;
+}
+/* for width 800px or lower: make set block display */
+@media(max-width:800px) { 
+  .image-content {
+    display: block;
+  }
+}
+
 h2 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: var(--header2);
@@ -95,6 +106,12 @@ li {
 a {
   color: var(--navyblue);
   text-decoration: underline;
+}
+
+img {
+  min-width: 20rem;
+  max-width: 30%;
+  max-height: 100%;
 }
 
 cite {
