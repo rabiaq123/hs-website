@@ -14,10 +14,9 @@
   position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
+  width: auto;
   background-color: var(--navyblue);
-  z-index: 1;
-  padding: 20px;
+  padding-bottom:20px;
 }
 
 #navbar a {
@@ -79,12 +78,6 @@ h1 {
   display: flex;
   flex-direction: row;
 }
-/* for width 800px or lower: make set block display */
-@media(max-width:800px) { 
-  .image-content {
-    display: block;
-  }
-}
 
 h2 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -94,6 +87,10 @@ h2 {
 
 h3 {
   color: var(--header3);
+}
+
+p {
+  margin-top: 0%;
 }
 
 p,
@@ -111,15 +108,32 @@ a {
 img {
   min-width: 20rem;
   max-width: 30%;
-  max-height: 100%;
+}
+
+.image-and-cite {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  border: 2px solid var(--imageborder);
+  height: 12rem;
 }
 
 cite {
   padding-top: 1%;
   font-size: smaller;
-  width: auto;
+  width: fit-content;
 }
 
 .section {
   padding-top: 2%;
+}
+
+/* for width 800px or lower */
+@media(max-width:800px) {
+  .image-content {
+    display: block;
+  }
 }
