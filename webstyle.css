@@ -19,10 +19,14 @@ body {
   position: sticky;
   top: 0;
   left: 0;
-  width: auto;
   background-color: var(--navyblue);
-  padding:20px;
+  padding:0px;
   z-index: 1;
+  
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #navbar a {
@@ -31,10 +35,28 @@ body {
   font-size: 1.2em;
   font-weight: bold;
   padding: 10px;
-  margin: 10px;
   border-radius: 5px;
   background-color: var(--blockbg);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#navbar div {
+  align-items: center;
+  margin: 10px 10px;
+}
+
+#navbar #logo {
+  background-color: transparent;
+  padding: 0px;
+}
+
+#navbar #logo img {
+  width: 4rem;
+  max-width: fit-content;
+}
+
+#navbar #logo img:hover {
+  box-shadow: 0px 0px 5px 0px var(--grey) /** [h-off] [v-off] [blur-rad] [spread-rad] [color]; */
 }
 
 #navbar a:active {
@@ -112,11 +134,6 @@ a {
   text-decoration: underline;
 }
 
-img {
-  min-width: 20rem;
-  max-width: 30%;
-}
-
 .image-and-cite {
   display: flex;
   flex-direction: column;
@@ -124,6 +141,8 @@ img {
 
 .image {
   width: 100%;
+  min-width: 20rem;
+  max-width: 30%;
   border: 2px solid var(--imageborder);
   height: 12rem;
 }
@@ -162,23 +181,25 @@ cite {
   max-width: 30%;
 }
 
-@media(max-width:350px) {
-  #title {
-    top:30%;
-  }
-}
-
 @media(max-width:450px) {
+  #navbar {
+    padding:15px;
+  }
+  #logo {
+    display: none;
+  }
   #title span {
     margin-left: 0px !important;
   }
-
   .image {
     height: 9rem;
-  }
-
-  img {
     min-width: 15rem;
+  }
+}
+
+@media(min-width:451px) {
+  #home {
+    display: none;
   }
 }
 
@@ -188,15 +209,12 @@ cite {
     flex-direction: row;
     flex-wrap: wrap;
   }
-
   #navbar a {
     font-size: smaller;
   }
-
   .header-pic {
     height: 300px;
   }
-
   #title span {
     font-size: smaller;
   }
@@ -207,7 +225,6 @@ cite {
   .image-content {
     display: block;
   }
-
   #title span {
     background-color: transparent;
     color: white;
@@ -226,7 +243,6 @@ cite {
     will-change: transform;
     z-index: -1;
   }
-
   .content {
     background-color: var(--offwhite);
     padding: 5%;
