@@ -80,7 +80,7 @@ body {
 #title {
   text-transform: uppercase;
   position: absolute;
-  top: 20%;
+  top: 25%;
   width: 100%;
   text-align: start;
   font-size: 42px;
@@ -224,6 +224,9 @@ cite {
   /* up to lg size screen */
   .image-content {
     display: block;
+  }
+  #title {
+    top:20%;
   }
   #title span {
     background-color: transparent;
