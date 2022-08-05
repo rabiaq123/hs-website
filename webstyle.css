@@ -215,6 +215,9 @@ cite {
   .header-pic {
     height: 300px;
   }
+  #title {
+    top: 20%;
+  }
   #title span {
     font-size: smaller;
   }
@@ -224,9 +227,6 @@ cite {
   /* up to lg size screen */
   .image-content {
     display: block;
-  }
-  #title {
-    top:20%;
   }
   #title span {
     background-color: transparent;
