@@ -22,6 +22,7 @@ body {
   width: auto;
   background-color: var(--navyblue);
   padding:20px;
+  z-index: 1;
 }
 
 #navbar a {
@@ -43,10 +44,21 @@ body {
   background-color: var(--paleyellow);
 }
 
+.header-pic {
+  display: block;
+  max-width: 100%;
+  height: 350px;
+  background-image: url('./images/background-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30% 80%;
+  box-shadow: 0px 15px 15px var(--grey);
+}
+
 #title {
   text-transform: uppercase;
   position: absolute;
-  top: 40%;
+  top: 20%;
   width: 100%;
   text-align: start;
   font-size: 42px;
@@ -57,18 +69,6 @@ body {
 
 #title span {
   background-color: var(--paleyellow);
-}
-
-.header-pic {
-  position: relative;
-  display: block;
-  max-width: 100%;
-  height: 350px;
-  background-image: url('./images/background-3.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 30% 80%;
-  box-shadow: 0px 15px 15px var(--grey);
 }
 
 div {
@@ -162,37 +162,27 @@ cite {
   max-width: 30%;
 }
 
-@media(min-width: 768px) {
-  .background::before {
-      background-image: url("images/background-3.jpg");
-      background-size: cover;
-      content: "";
-      height: 100%;
-      position: fixed;
-      width: 100%;
-      will-change: transform;
-      z-index: -1;
-    }
-
-    .content {
-      background-color: var(--offwhite);
-      padding: 5%;
-    }
+@media(max-width:350px) {
+  #title {
+    top:30%;
+  }
 }
 
-/* for width 800px or lower */
-@media(max-width:1024px) {
-  .image-content {
-    display: block;
-  }
-
+@media(max-width:450px) {
   #title span {
-    background-color: transparent;
-    color: white;
+    margin-left: 0px !important;
+  }
+
+  .image {
+    height: 9rem;
+  }
+
+  img {
+    min-width: 15rem;
   }
 }
 
-@media(max-width:500px) {
+@media(max-width:505px) {
   #navbar {
     display: flex;
     flex-direction: row;
@@ -207,19 +197,38 @@ cite {
     height: 300px;
   }
 
-  #title {
-    text-transform: uppercase;
-    position: absolute;
-    top: 20%;
-    width: 100%;
-    text-align: start;
-    font-size: 42px;
-    font-weight: bolder;
-    color: black;
-    letter-spacing: 10px;
+  #title span {
+    font-size: smaller;
+  }
+}
+
+@media(max-width:1024px) {
+  /* up to lg size screen */
+  .image-content {
+    display: block;
   }
 
   #title span {
-    font-size: smaller;
+    background-color: transparent;
+    color: white;
+  }
+}
+
+@media(min-width: 768px) {
+  /* starting from md size screen */
+  .background::before {
+    background-image: url("images/background-3.jpg");
+    background-size: cover;
+    content: "";
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    will-change: transform;
+    z-index: -1;
+  }
+
+  .content {
+    background-color: var(--offwhite);
+    padding: 5%;
   }
 }
