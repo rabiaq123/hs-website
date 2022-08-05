@@ -166,10 +166,11 @@ cite {
   bottom: 0;
   left: 0;
   right: 0;
+  text-align: center;
 
   margin-top:auto;
   margin-bottom: auto;
-  text-align: center;
+  padding: 0% 5%;
 }
 
 .error p, .error a {
@@ -221,21 +222,30 @@ cite {
   #title span {
     font-size: smaller;
   }
+  .error p, .error a {
+    font-size: medium;
+  }
+  .error img {
+    max-width: 70%;
+  }
+}
+
+@media(max-width:768px) {
+  /* up to md size screen */
+  .image-content {
+    display: block;
+  }
 }
 
 @media(max-width:1024px) {
   /* up to lg size screen */
-  .image-content {
-    display: block;
-  }
   #title span {
     background-color: transparent;
     color: white;
   }
 }
 
-@media(min-width: 768px) {
-  /* starting from md size screen */
+@media(min-width: 769px) {
   .background::before {
     background-image: url("images/background-3.jpg");
     background-size: cover;
