@@ -134,17 +134,17 @@ a {
   text-decoration: underline;
 }
 
-.image-and-cite {
+.image {
   display: flex;
   flex-direction: column;
 }
 
-.image {
+.image img {
   width: 100%;
-  min-width: 20rem;
-  max-width: 30%;
+  min-width: 20vw;
+  max-width: 40vw;
+  height: 25vh;
   border: 2px solid var(--imageborder);
-  height: 12rem;
 }
 
 cite {
