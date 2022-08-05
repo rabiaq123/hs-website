@@ -1,5 +1,5 @@
 :root {
-  --greywhite: #f8f5ee;
+  --offwhite: #f8f5ee;
   --paleyellow: #FFD34E;
   --amber: #c27b00;
   --purplegrey: #424363;
@@ -7,6 +7,11 @@
   --imageborder: #727381;
   --blockbg: #f5e6ba;
   --navyblue: #000B2C;
+}
+
+body {
+  margin: 0% 0% 5%;
+  background-color: var(--offwhite);
 }
 
 #navbar {
@@ -68,11 +73,6 @@
 
 div {
   margin: 10px 0px;
-}
-
-body {
-  margin: 0% 0% 5%;
-  background-color: var(--greywhite);
 }
 
 h1,
@@ -162,10 +162,33 @@ cite {
   max-width: 30%;
 }
 
+@media(min-width: 768px) {
+  .background::before {
+      background-image: url("images/background-3.jpg");
+      background-size: cover;
+      content: "";
+      height: 100%;
+      position: fixed;
+      width: 100%;
+      will-change: transform;
+      z-index: -1;
+    }
+
+    .content {
+      background-color: var(--offwhite);
+      padding: 5%;
+    }
+}
+
 /* for width 800px or lower */
-@media(max-width:800px) {
+@media(max-width:1024px) {
   .image-content {
     display: block;
+  }
+
+  #title span {
+    background-color: transparent;
+    color: white;
   }
 }
 
@@ -197,8 +220,6 @@ cite {
   }
 
   #title span {
-    background-color: transparent;
-    color: white;
     font-size: smaller;
   }
 }
