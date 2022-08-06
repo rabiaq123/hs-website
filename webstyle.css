@@ -7,6 +7,7 @@
   --imageborder: #727381;
   --blockbg: #f5e6ba;
   --navyblue: #000B2C;
+  --dustyrose: indianred;
 }
 
 body {
@@ -38,11 +39,8 @@ body {
   border-radius: 5px;
   background-color: var(--blockbg);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-#navbar div {
   align-items: center;
-  margin: 10px 10px;
+  margin: 10px;
 }
 
 #navbar #logo {
@@ -59,11 +57,17 @@ body {
   box-shadow: 0px 0px 5px 0px var(--grey) /** [h-off] [v-off] [blur-rad] [spread-rad] [color]; */
 }
 
-#navbar a:active {
-  background-color: var(--paleyellow);
+#navbar a:active,
+#home #navbar .home,
+#one #navbar .one,
+#two #navbar .two {
+  background-color: var(--dustyrose);
+  color: white;
 }
+
 #navbar a:hover {
-  background-color: var(--paleyellow);
+  background-color: var(--paleyellow) !important;
+  color: var(--navyblue) !important;
 }
 
 .header-pic {
@@ -110,7 +114,7 @@ cite {
 
 h2 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: var(--amber);
+  color: var(--dustyrose);
   font-size: x-large;
 }
 
@@ -203,6 +207,9 @@ cite {
   #navbar {
     padding:15px;
   }
+  #navbar a {
+    margin: 5px;
+  }
   #logo {
     display: none;
   }
@@ -226,7 +233,7 @@ cite {
 }
 
 @media(min-width:451px) {
-  #home {
+  #home-btn {
     display: none;
   }
 }
