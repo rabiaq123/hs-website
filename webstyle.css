@@ -140,10 +140,12 @@ a {
 }
 
 .image img {
+  /*
   width: 100%;
   min-width: 20vw;
   max-width: 40vw;
   height: 25vh;
+  */
   border: 2px solid var(--imageborder);
 }
 
@@ -155,6 +157,16 @@ cite {
 
 .section {
   padding-top: 3%;
+}
+
+#band-formation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+}
+
+#band-formation img {
+  min-width: 30px;
 }
 
 .error {
@@ -192,9 +204,9 @@ cite {
   #title span {
     margin-left: 0px !important;
   }
-  .image {
-    height: 9rem;
-    min-width: 15rem;
+  .image img {
+    /* width: 60vw !important; */
+    width: 225px !important;
   }
 }
 
@@ -230,10 +242,19 @@ cite {
   }
 }
 
+@media(max-width:640px) {
+  /* .image img {
+    width: 50vw !important;
+  } */
+}
+
 @media(max-width:768px) {
   /* up to md size screen */
-  .image-content {
-    display: block;
+  /* .image img {
+    width: 40vw !important;
+  } */
+  #band-formation img {
+    width: 225px !important;
   }
 }
 
@@ -242,6 +263,12 @@ cite {
   #title span {
     background-color: transparent;
     color: white;
+  }
+  .image-content {
+    display: block;
+  }
+  #band-formation {
+    flex-wrap:wrap !important;
   }
 }
 
@@ -259,5 +286,15 @@ cite {
   .content {
     background-color: var(--offwhite);
     padding: 5%;
+  }
+  #band-formation img {
+    max-width: 30vw;
+  }
+}
+
+@media(min-width: 1025px) {
+  .image img {
+    min-width: 15vw;
+    max-width: 100%;
   }
 }
