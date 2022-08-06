@@ -139,16 +139,6 @@ a {
   flex-direction: column;
 }
 
-.image img {
-  /*
-  width: 100%;
-  min-width: 20vw;
-  max-width: 40vw;
-  height: 25vh;
-  */
-  border: 2px solid var(--imageborder);
-}
-
 cite {
   padding-top: 1%;
   font-size: smaller;
@@ -167,6 +157,21 @@ cite {
 
 #band-formation img {
   min-width: 30px;
+}
+
+.float-section {
+  text-align:center; 
+  padding-bottom:15px; 
+  padding-left:15px; 
+  float: right; 
+  display: block;
+}
+
+.float-section img {
+  float: right;
+  margin: 2% 0% 2% 4%;
+  height: 20vw;
+  min-height: 150px;
 }
 
 .error {
@@ -205,8 +210,18 @@ cite {
     margin-left: 0px !important;
   }
   .image img {
-    /* width: 60vw !important; */
     width: 225px !important;
+  }
+  .float-section {
+    text-align: start;
+    padding-bottom: 15px;
+    padding-left: 0px;
+    float: none;
+    display: block;
+  }
+  .float-section img {
+    float:none;
+    margin: 0% 0% 2% 0%;
   }
 }
 
@@ -242,33 +257,10 @@ cite {
   }
 }
 
-@media(max-width:640px) {
-  /* .image img {
-    width: 50vw !important;
-  } */
-}
-
 @media(max-width:768px) {
   /* up to md size screen */
-  /* .image img {
-    width: 40vw !important;
-  } */
   #band-formation img {
     width: 225px !important;
-  }
-}
-
-@media(max-width:1024px) {
-  /* up to lg size screen */
-  #title span {
-    background-color: transparent;
-    color: white;
-  }
-  .image-content {
-    display: block;
-  }
-  #band-formation {
-    flex-wrap:wrap !important;
   }
 }
 
@@ -292,9 +284,34 @@ cite {
   }
 }
 
+@media(max-width:1024px) {
+  /* up to lg size screen */
+  #title span {
+    background-color: transparent;
+    color: white;
+  }
+  .image-content {
+    display: block;
+  }
+  #band-formation {
+    flex-wrap:wrap !important;
+  }
+  .image img {
+    width: 25vw;
+  }
+}
+
 @media(min-width: 1025px) {
+  /* larger than lg size screen */
   .image img {
     min-width: 15vw;
     max-width: 100%;
+  }
+}
+
+@media(min-width:1400px) {
+  #float-section img {
+    max-height: 15vw;
+    margin: 0% 0% 2% 4%;
   }
 }
