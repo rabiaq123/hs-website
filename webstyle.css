@@ -103,16 +103,24 @@ footer {
   text-transform: uppercase;
   position: absolute;
   top: 25%;
-  width: 100%;
   text-align: start;
-  font-size: 42px;
   font-weight: bolder;
   color: black;
-  letter-spacing: 10px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
 }
 
 #title span {
-  background-color: var(--paleyellow);
+  color: white;
+  font-size: 42px;
+  letter-spacing: 10px;
+}
+
+#title p {
+  color: black;
+  background-color: rgb(253, 214, 214);
+  letter-spacing: 5px;
 }
 
 div {
@@ -234,9 +242,6 @@ cite {
   #title span {
     margin-left: 0px !important;
   }
-  /* .image img {
-    width: 225px !important;
-  } */
   .float-section {
     text-align: start;
     padding-bottom: 15px;
@@ -315,6 +320,9 @@ cite {
     background-color: transparent;
     color: white;
   }
+  #title p {
+    display: none;
+  }
   .image-content {
     display: block;
   }
@@ -333,6 +341,10 @@ cite {
     min-width: 15vw;
     max-width: 100%;
   }
+}
+
+@media(min-width:1280px) {
+  /* larger than xl size screen */
   .header-pic {
     background-position: 30% 80%;
   }
