@@ -17,14 +17,14 @@ body {
 
 #navbar {
   margin: 0%;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: var(--navyblue);
   padding:0px;
   z-index: 1;
   
-  width: auto;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -43,26 +43,26 @@ body {
   margin: 10px;
 }
 
-#navbar #logo {
+#navbar #home-logo {
   background-color: transparent;
   padding: 0px;
 }
 
-#navbar #logo img {
+#navbar #home-logo img {
   width: 4rem;
   max-width: fit-content;
 }
 
-#navbar #logo img:hover {
+#navbar #home-logo img:hover {
   box-shadow: 0px 0px 5px 0px var(--grey) /** [h-off] [v-off] [blur-rad] [spread-rad] [color]; */
 }
 
-#navbar a:active, #navbar a:target {
+#navbar a:active, #navbar a:hover,
+#home #navbar .home,
+#one #navbar .one,
+#two #navbar .two {
   background-color: var(--dustyrose);
   color: white;
-}
-#navbar a:hover {
-  background-color: var(--paleyellow);
 }
 
 .header-pic {
@@ -171,6 +171,7 @@ cite {
   margin: 2% 0% 2% 4%;
   height: 20vw;
   min-height: 150px;
+  max-height: 200px;
 }
 
 .error {
@@ -205,7 +206,7 @@ cite {
   #navbar a {
     margin: 5px;
   }
-  #logo {
+  #home-logo {
     display: none;
   }
   #title span {
@@ -228,7 +229,7 @@ cite {
 }
 
 @media(min-width:451px) {
-  #home {
+  #home-text {
     display: none;
   }
 }
@@ -264,6 +265,11 @@ cite {
   #band-formation img {
     width: 225px !important;
   }
+}
+
+.content {
+  margin: 5% 10%;
+  padding-top: 10vh;
 }
 
 @media(min-width: 769px) {
