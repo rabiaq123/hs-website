@@ -63,6 +63,7 @@ body {
 }
 #navbar a:hover {
   background-color: var(--paleyellow);
+  color: var(--navyblue);
 }
 
 .header-pic {
