@@ -296,6 +296,9 @@ cite {
   #band-formation img {
     width: 225px !important;
   }
+  .content {
+    padding: 5% 5% 10%;
+  }
 }
 
 @media(min-width: 769px) {
@@ -314,7 +317,7 @@ cite {
     padding: 5%;
   }
   #band-formation img {
-    max-width: 30vw;
+    max-width: 350px;
   }
 }
 
