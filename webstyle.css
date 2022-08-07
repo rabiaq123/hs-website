@@ -37,7 +37,7 @@ footer {
   background-color: var(--navyblue);
   padding:0px;
   z-index: 1;
-  
+
   width: auto;
   display: flex;
   flex-direction: row;
@@ -84,14 +84,18 @@ footer {
   color: var(--navyblue) !important;
 }
 
+#navbar #logo:hover {
+  background-color: transparent !important;
+}
+
 .header-pic {
   display: block;
   max-width: 100%;
   height: 350px;
-  background-image: url('./images/background-3.jpg');
+  background-image: url('./images/hs-background.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 30% 80%;
+  background-position: right bottom;
   box-shadow: 0px 15px 15px var(--grey);
 }
 
@@ -178,10 +182,10 @@ cite {
 }
 
 .float-section {
-  text-align:center; 
-  padding-bottom:15px; 
-  padding-left:15px; 
-  float: right; 
+  text-align:center;
+  padding-bottom:15px;
+  padding-left:4%;
+  float: right;
   display: block;
 }
 
@@ -230,9 +234,9 @@ cite {
   #title span {
     margin-left: 0px !important;
   }
-  .image img {
+  /* .image img {
     width: 225px !important;
-  }
+  } */
   .float-section {
     text-align: start;
     padding-bottom: 15px;
@@ -318,7 +322,8 @@ cite {
     flex-wrap:wrap !important;
   }
   .image img {
-    width: 25vw;
+    /* width: 25vw; */
+    max-width:225px;
   }
 }
 
@@ -328,11 +333,14 @@ cite {
     min-width: 15vw;
     max-width: 100%;
   }
+  .header-pic {
+    background-position: 30% 80%;
+  }
 }
 
 @media(min-width:1400px) {
-  #float-section img {
-    max-height: 15vw;
+  .float-section img {
+    max-height: 200px;
     margin: 0% 0% 2% 4%;
   }
 }
