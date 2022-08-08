@@ -363,7 +363,7 @@ cite {
 
 @media(min-width:1400px) {
   .float-section img {
-    max-height: 200px;
+    height: 180px;
     margin: 0% 0% 2% 4%;
   }
 }
