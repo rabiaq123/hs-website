@@ -356,8 +356,8 @@ cite {
 @media(min-width: 1025px) {
   /* larger than lg size screen */
   .image img {
-    min-width: 15vw;
-    max-width: 100%;
+    min-width: 10vw;
+    max-width: 13vw;
   }
 }
 
